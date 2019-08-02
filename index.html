@@ -17,8 +17,8 @@
 d3.csv("pokemon.csv",function(data) {
     // set the dimensions and margins of the graph
 var margin = {top: 10, right: 100, bottom: 30, left: 30},
-    width = 600 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+    width = 1000 - margin.left - margin.right,
+    height = 600 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
@@ -28,81 +28,182 @@ var svg = d3.select("#my_dataviz")
   .append("g")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
-
+    var AttackMean = 0
     var HPMean = 0
+    var DefenseMean = 0
+    var SpAltMean = 0
+    var SpDefMean = 0
+    var SpeedMean = 0
 
-    var HPMeanTotal = []
+    var HP = []
+    var Attack= []
+    var Defense = []
+    var SpecialAttack = []
+    var SpecialDefense = []
+    var Speed = []
     count = 0
     
     data.forEach(function(d) {
         if (d.Generation == 1){
             HPMean += +d.HP;
+            AttackMean += +d.Attack;
+            DefenseMean += +d.Defense;
+            SpAltMean += +d.SpAtk;
+            SpDefMean += +d.SpDef;
+            SpeedMean += +d.Speed;
             count++;
         }  
     });
-    HPMeanTotal.push(HPMean/count);
+    HP.push(HPMean/count);
+    Attack.push(AttackMean/count);
+    Defense.push(DefenseMean/count);
+    SpecialAttack.push(SpAltMean/count);
+    SpecialDefense.push(SpDefMean/count);
+    Speed.push(SpeedMean/count);
     count =0;
     HPMean = 0;
+    AttackMean = 0;
+    DefenseMean = 0;
+    SpAltMean = 0;
+    SpDefMean = 0;
+    SpeedMean = 0;
     data.forEach(function(d) {
         if (d.Generation == 2){
             HPMean += +d.HP;
+            AttackMean += +d.Attack;
+            DefenseMean += +d.Defense;
+            SpAltMean += +d.SpAtk;
+            SpDefMean += +d.SpDef;
+            SpeedMean += +d.Speed;
             count++;
         }  
     });
-    HPMeanTotal.push(HPMean/count);
-    count = 0
+    HP.push(HPMean/count);
+    Attack.push(AttackMean/count);
+    Defense.push(DefenseMean/count);
+    SpecialAttack.push(SpAltMean/count);
+    SpecialDefense.push(SpDefMean/count);
+    Speed.push(SpeedMean/count);
+    count =0;
     HPMean = 0;
+    AttackMean = 0;
+    DefenseMean = 0;
+    SpAltMean = 0;
+    SpDefMean = 0;
+    SpeedMean = 0;
     data.forEach(function(d) {
         if (d.Generation == 3){
             HPMean += +d.HP;
+            AttackMean += +d.Attack;
+            DefenseMean += +d.Defense;
+            SpAltMean += +d.SpAtk;
+            SpDefMean += +d.SpDef;
+            SpeedMean += +d.Speed;
             count++;
         }  
     });
-    HPMeanTotal.push(HPMean/count);
-    count = 0
+    HP.push(HPMean/count);
+    Attack.push(AttackMean/count);
+    Defense.push(DefenseMean/count);
+    SpecialAttack.push(SpAltMean/count);
+    SpecialDefense.push(SpDefMean/count);
+    Speed.push(SpeedMean/count);
+    count =0;
     HPMean = 0;
+    AttackMean = 0;
+    DefenseMean = 0;
+    SpAltMean = 0;
+    SpDefMean = 0;
+    SpeedMean = 0;
     data.forEach(function(d) {
         if (d.Generation == 4){
-            HPMean += +d.HP;
+           HPMean += +d.HP;
+            AttackMean += +d.Attack;
+            DefenseMean += +d.Defense;
+            SpAltMean += +d.SpAtk;
+            SpDefMean += +d.SpDef;
+            SpeedMean += +d.Speed;
             count++;
         }  
     });
-    HPMeanTotal.push(HPMean/count);
-    count = 0
+    HP.push(HPMean/count);
+    Attack.push(AttackMean/count);
+    Defense.push(DefenseMean/count);
+    SpecialAttack.push(SpAltMean/count);
+    SpecialDefense.push(SpDefMean/count);
+    Speed.push(SpeedMean/count);
+    count =0;
     HPMean = 0;
+    AttackMean = 0;
+    DefenseMean = 0;
+    SpAltMean = 0;
+    SpDefMean = 0;
+    SpeedMean = 0;
     data.forEach(function(d) {
         if (d.Generation == 5){
             HPMean += +d.HP;
+            AttackMean += +d.Attack;
+            DefenseMean += +d.Defense;
+            SpAltMean += +d.SpAtk;
+            SpDefMean += +d.SpDef;
+            SpeedMean += +d.Speed;
             count++;
         }  
     });
-    HPMeanTotal.push(HPMean/count);
-    count = 0
+    HP.push(HPMean/count);
+    Attack.push(AttackMean/count);
+    Defense.push(DefenseMean/count);
+    SpecialAttack.push(SpAltMean/count);
+    SpecialDefense.push(SpDefMean/count);
+    Speed.push(SpeedMean/count);
+    count =0;
     HPMean = 0;
+    AttackMean = 0;
+    DefenseMean = 0;
+    SpAltMean = 0;
+    SpDefMean = 0;
+    SpeedMean = 0;
     data.forEach(function(d) {
         if (d.Generation == 6){
             HPMean += +d.HP;
+            AttackMean += +d.Attack;
+            DefenseMean += +d.Defense;
+            SpAltMean += +d.SpAtk;
+            SpDefMean += +d.SpDef;
+            SpeedMean += +d.Speed;
             count++;
         }  
     });
-    HPMeanTotal.push(HPMean/count);
+    HP.push(HPMean/count);
+    Attack.push(AttackMean/count);
+    Defense.push(DefenseMean/count);
+    SpecialAttack.push(SpAltMean/count);
+    SpecialDefense.push(SpDefMean/count);
+    Speed.push(SpeedMean/count);
+    count =0;
+    HPMean = 0;
+    AttackMean = 0;
+    DefenseMean = 0;
+    SpAltMean = 0;
+    SpDefMean = 0;
+    SpeedMean = 0;
     
-    console.log(HPMeanTotal);
-    var allGroup = ["HP","Attack"]
+    console.log(HP);
+    var allGroup = ["HP","Attack","Defense","SpecialAttack","SpecialDefense","Speed"]
     line_data = [
-    {type: 1, value : HPMeanTotal[0]},
-    {type: 2, value : HPMeanTotal[1]},
-    {type: 3, value : HPMeanTotal[2]},
-    {type: 4, value : HPMeanTotal[3]},
-    {type: 5, value : HPMeanTotal[4]},
-    {type: 6, value : HPMeanTotal[5]},
+    {type: 1, value : {HP :HP[0] , Attack: Attack[0] , Defense : Defense[0],SpecialAttack: SpecialAttack[0],SpecialDefense: SpecialDefense[0],Speed : Speed[0] }},
+    {type: 2, value :  {HP :HP[1] , Attack: Attack[1] , Defense : Defense[1],SpecialAttack: SpecialAttack[1],SpecialDefense: SpecialDefense[1],Speed : Speed[1] }},
+    {type: 3, value :  {HP :HP[2] , Attack: Attack[2] , Defense : Defense[2],SpecialAttack: SpecialAttack[2],SpecialDefense: SpecialDefense[2],Speed : Speed[2] }},
+    {type: 4, value :  {HP :HP[3] , Attack: Attack[3] , Defense : Defense[3],SpecialAttack: SpecialAttack[3],SpecialDefense: SpecialDefense[3],Speed : Speed[3] }},
+    {type: 5, value :  {HP :HP[4] , Attack: Attack[4] , Defense : Defense[4],SpecialAttack: SpecialAttack[4],SpecialDefense: SpecialDefense[4],Speed : Speed[4] }},
+    {type: 6, value :  {HP :HP[5] , Attack: Attack[5] , Defense : Defense[5],SpecialAttack: SpecialAttack[5],SpecialDefense: SpecialDefense[5],Speed : Speed[5] }},
     ];
             // Reformat the data: we need an array of arrays of {x, y} tuples
     var dataReady = allGroup.map( function(grpName) { // .map allows to do something for each element of the list
       return {
         name: grpName,
         values: line_data.map(function(d) {
-          return {type: d.type, value: +d.value};
+          return {type: d.type, value: +d.value[grpName]};
         })
       };
     });
@@ -116,7 +217,7 @@ var svg = d3.select("#my_dataviz")
     var x = d3.scaleLinear().range([0, width]).domain([0,6]);
     var xAxis = d3.axisBottom().scale(x).ticks(5);
     svg.append("g").attr("transform", "translate(0," + height + ")").call(xAxis);
-    var y = d3.scaleLinear().range([height, 0]).domain([0, d3.max(HPMeanTotal)+20]);
+    var y = d3.scaleLinear().range([height, 0]).domain([55, d3.max(HP)+20]);
     svg.append("g")
       .call(d3.axisLeft(y));
     console.log(svg)
