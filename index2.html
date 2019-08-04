@@ -20,9 +20,9 @@
     Scene switch
   </button>
   <div class="dropdown-menu">
-    <a class="dropdown-item" href="index.html">Generations/Attribute</a>
-    <a class="dropdown-item" href="index2.html">Another action</a>
-    <a class="dropdown-item" href="index3.html">Something else here</a>
+    <a class="dropdown-item" href="index.html">Non Legend Generations/Attribute</a>
+    <a class="dropdown-item" href="index2.html">Type/Attribute</a>
+    <a class="dropdown-item" href="index3.html">Legend Generations/Attribute</a>
 
   </div>
 </div>
@@ -151,32 +151,11 @@ var svg = d3.select("#my_dataviz")
     SpAltMean = 0;
     SpDefMean = 0;
     SpeedMean = 0;
+    
+    
+    
     data.forEach(function(d) {
-        if (d.Type1 == "Bug"){
-           HPMean += +d.HP;
-            AttackMean += +d.Attack;
-            DefenseMean += +d.Defense;
-            SpAltMean += +d.SpAtk;
-            SpDefMean += +d.SpDef;
-            SpeedMean += +d.Speed;
-            count++;
-        }  
-    });
-    HP.push(HPMean/count);
-    Attack.push(AttackMean/count);
-    Defense.push(DefenseMean/count);
-    SpecialAttack.push(SpAltMean/count);
-    SpecialDefense.push(SpDefMean/count);
-    Speed.push(SpeedMean/count);
-    count =0;
-    HPMean = 0;
-    AttackMean = 0;
-    DefenseMean = 0;
-    SpAltMean = 0;
-    SpDefMean = 0;
-    SpeedMean = 0;
-    data.forEach(function(d) {
-        if (d.Type1 == "Normal"){
+        if (d.Type1 == "Poison"){
             HPMean += +d.HP;
             AttackMean += +d.Attack;
             DefenseMean += +d.Defense;
@@ -200,7 +179,7 @@ var svg = d3.select("#my_dataviz")
     SpDefMean = 0;
     SpeedMean = 0;
     data.forEach(function(d) {
-        if (d.Generation == "Poison"){
+        if (d.Type1 == "Dragon"){
             HPMean += +d.HP;
             AttackMean += +d.Attack;
             DefenseMean += +d.Defense;
@@ -224,7 +203,7 @@ var svg = d3.select("#my_dataviz")
     SpDefMean = 0;
     SpeedMean = 0;
     data.forEach(function(d) {
-        if (d.Generation == "Poison"){
+        if (d.Type1== "Ghost"){
             HPMean += +d.HP;
             AttackMean += +d.Attack;
             DefenseMean += +d.Defense;
@@ -248,7 +227,7 @@ var svg = d3.select("#my_dataviz")
     SpDefMean = 0;
     SpeedMean = 0;
     data.forEach(function(d) {
-        if (d.Generation == "Dragon"){
+        if (d.Type1== "Bug"){
             HPMean += +d.HP;
             AttackMean += +d.Attack;
             DefenseMean += +d.Defense;
@@ -272,7 +251,151 @@ var svg = d3.select("#my_dataviz")
     SpDefMean = 0;
     SpeedMean = 0;
     data.forEach(function(d) {
-        if (d.Generation == "Ghost"){
+        if (d.Type1== "Dark"){
+            HPMean += +d.HP;
+            AttackMean += +d.Attack;
+            DefenseMean += +d.Defense;
+            SpAltMean += +d.SpAtk;
+            SpDefMean += +d.SpDef;
+            SpeedMean += +d.Speed;
+            count++;
+        }  
+    });
+    HP.push(HPMean/count);
+    Attack.push(AttackMean/count);
+    Defense.push(DefenseMean/count);
+    SpecialAttack.push(SpAltMean/count);
+    SpecialDefense.push(SpDefMean/count);
+    Speed.push(SpeedMean/count);
+    count =0;
+    HPMean = 0;
+    AttackMean = 0;
+    DefenseMean = 0;
+    SpAltMean = 0;
+    SpDefMean = 0;
+    SpeedMean = 0;
+    data.forEach(function(d) {
+        if (d.Type1== "Electric"){
+            HPMean += +d.HP;
+            AttackMean += +d.Attack;
+            DefenseMean += +d.Defense;
+            SpAltMean += +d.SpAtk;
+            SpDefMean += +d.SpDef;
+            SpeedMean += +d.Speed;
+            count++;
+        }  
+    });
+    HP.push(HPMean/count);
+    Attack.push(AttackMean/count);
+    Defense.push(DefenseMean/count);
+    SpecialAttack.push(SpAltMean/count);
+    SpecialDefense.push(SpDefMean/count);
+    Speed.push(SpeedMean/count);
+    count =0;
+    HPMean = 0;
+    AttackMean = 0;
+    DefenseMean = 0;
+    SpAltMean = 0;
+    SpDefMean = 0;
+    SpeedMean = 0;
+    data.forEach(function(d) {
+        if (d.Type1== "Ground"){
+            HPMean += +d.HP;
+            AttackMean += +d.Attack;
+            DefenseMean += +d.Defense;
+            SpAltMean += +d.SpAtk;
+            SpDefMean += +d.SpDef;
+            SpeedMean += +d.Speed;
+            count++;
+        }  
+    });
+    HP.push(HPMean/count);
+    Attack.push(AttackMean/count);
+    Defense.push(DefenseMean/count);
+    SpecialAttack.push(SpAltMean/count);
+    SpecialDefense.push(SpDefMean/count);
+    Speed.push(SpeedMean/count);
+    count =0;
+    HPMean = 0;
+    AttackMean = 0;
+    DefenseMean = 0;
+    SpAltMean = 0;
+    SpDefMean = 0;
+    SpeedMean = 0;
+    data.forEach(function(d) {
+        if (d.Type1== "Steel"){
+            HPMean += +d.HP;
+            AttackMean += +d.Attack;
+            DefenseMean += +d.Defense;
+            SpAltMean += +d.SpAtk;
+            SpDefMean += +d.SpDef;
+            SpeedMean += +d.Speed;
+            count++;
+        }  
+    });
+    HP.push(HPMean/count);
+    Attack.push(AttackMean/count);
+    Defense.push(DefenseMean/count);
+    SpecialAttack.push(SpAltMean/count);
+    SpecialDefense.push(SpDefMean/count);
+    Speed.push(SpeedMean/count);
+    count =0;
+    HPMean = 0;
+    AttackMean = 0;
+    DefenseMean = 0;
+    SpAltMean = 0;
+    SpDefMean = 0;
+    SpeedMean = 0;
+    data.forEach(function(d) {
+        if (d.Type1== "Rock"){
+            HPMean += +d.HP;
+            AttackMean += +d.Attack;
+            DefenseMean += +d.Defense;
+            SpAltMean += +d.SpAtk;
+            SpDefMean += +d.SpDef;
+            SpeedMean += +d.Speed;
+            count++;
+        }  
+    });
+    HP.push(HPMean/count);
+    Attack.push(AttackMean/count);
+    Defense.push(DefenseMean/count);
+    SpecialAttack.push(SpAltMean/count);
+    SpecialDefense.push(SpDefMean/count);
+    Speed.push(SpeedMean/count);
+    count =0;
+    HPMean = 0;
+    AttackMean = 0;
+    DefenseMean = 0;
+    SpAltMean = 0;
+    SpDefMean = 0;
+    SpeedMean = 0;
+    data.forEach(function(d) {
+        if (d.Type1== "Psychic"){
+            HPMean += +d.HP;
+            AttackMean += +d.Attack;
+            DefenseMean += +d.Defense;
+            SpAltMean += +d.SpAtk;
+            SpDefMean += +d.SpDef;
+            SpeedMean += +d.Speed;
+            count++;
+        }  
+    });
+    HP.push(HPMean/count);
+    Attack.push(AttackMean/count);
+    Defense.push(DefenseMean/count);
+    SpecialAttack.push(SpAltMean/count);
+    SpecialDefense.push(SpDefMean/count);
+    Speed.push(SpeedMean/count);
+    count =0;
+    HPMean = 0;
+    AttackMean = 0;
+    DefenseMean = 0;
+    SpAltMean = 0;
+    SpDefMean = 0;
+    SpeedMean = 0;
+    data.forEach(function(d) {
+        if (d.Type1== "Fighting"){
             HPMean += +d.HP;
             AttackMean += +d.Attack;
             DefenseMean += +d.Defense;
@@ -299,12 +422,22 @@ var svg = d3.select("#my_dataviz")
     console.log(HP);
     var allGroup = ["HP","Attack","Defense","SpecialAttack","SpecialDefense","Speed"]
     line_data = [
-    {type: 1, value : {HP :HP[0] , Attack: Attack[0] , Defense : Defense[0],SpecialAttack: SpecialAttack[0],SpecialDefense: SpecialDefense[0],Speed : Speed[0] }},
-    {type: 2, value :  {HP :HP[1] , Attack: Attack[1] , Defense : Defense[1],SpecialAttack: SpecialAttack[1],SpecialDefense: SpecialDefense[1],Speed : Speed[1] }},
-    {type: 3, value :  {HP :HP[2] , Attack: Attack[2] , Defense : Defense[2],SpecialAttack: SpecialAttack[2],SpecialDefense: SpecialDefense[2],Speed : Speed[2] }},
-    {type: 4, value :  {HP :HP[3] , Attack: Attack[3] , Defense : Defense[3],SpecialAttack: SpecialAttack[3],SpecialDefense: SpecialDefense[3],Speed : Speed[3] }},
-    {type: 5, value :  {HP :HP[4] , Attack: Attack[4] , Defense : Defense[4],SpecialAttack: SpecialAttack[4],SpecialDefense: SpecialDefense[4],Speed : Speed[4] }},
-    {type: 6, value :  {HP :HP[5] , Attack: Attack[5] , Defense : Defense[5],SpecialAttack: SpecialAttack[5],SpecialDefense: SpecialDefense[5],Speed : Speed[5] }},
+    {type: "Grass", value : {HP :HP[0] , Attack: Attack[0] , Defense : Defense[0],SpecialAttack: SpecialAttack[0],SpecialDefense: SpecialDefense[0],Speed : Speed[0] }},
+    {type: "Fire", value :  {HP :HP[1] , Attack: Attack[1] , Defense : Defense[1],SpecialAttack: SpecialAttack[1],SpecialDefense: SpecialDefense[1],Speed : Speed[1] }},
+    {type: "Water", value :  {HP :HP[2] , Attack: Attack[2] , Defense : Defense[2],SpecialAttack: SpecialAttack[2],SpecialDefense: SpecialDefense[2],Speed : Speed[2] }},
+    {type: "Poison", value :  {HP :HP[3] , Attack: Attack[3] , Defense : Defense[3],SpecialAttack: SpecialAttack[3],SpecialDefense: SpecialDefense[3],Speed : Speed[3] }},
+    {type: "Dragon", value :  {HP :HP[4] , Attack: Attack[4] , Defense : Defense[4],SpecialAttack: SpecialAttack[4],SpecialDefense: SpecialDefense[4],Speed : Speed[4] }},
+    {type: "Ghost", value :  {HP :HP[5] , Attack: Attack[5] , Defense : Defense[5],SpecialAttack: SpecialAttack[5],SpecialDefense: SpecialDefense[5],Speed : Speed[5] }},
+    {type: "Bug", value :  {HP :HP[6] , Attack: Attack[6] , Defense : Defense[6],SpecialAttack: SpecialAttack[6],SpecialDefense: SpecialDefense[6],Speed : Speed[6] }},
+    {type: "Dark", value :  {HP :HP[7] , Attack: Attack[7] , Defense : Defense[7],SpecialAttack: SpecialAttack[7],SpecialDefense: SpecialDefense[7],Speed : Speed[7] }},
+    {type: "Electric", value :  {HP :HP[8] , Attack: Attack[8] , Defense : Defense[8],SpecialAttack: SpecialAttack[8],SpecialDefense: SpecialDefense[8],Speed : Speed[8] }},
+    /*
+    {type: "Ground", value :  {HP :HP[9] , Attack: Attack[9] , Defense : Defense[9],SpecialAttack: SpecialAttack[9],SpecialDefense: SpecialDefense[9],Speed : Speed[9] }},*/
+    {type: "Steel", value :  {HP :HP[10] , Attack: Attack[10] , Defense : Defense[10],SpecialAttack: SpecialAttack[10],SpecialDefense: SpecialDefense[10],Speed : Speed[10] }},
+    {type: "Rock", value :  {HP :HP[11] , Attack: Attack[11] , Defense : Defense[11],SpecialAttack: SpecialAttack[11],SpecialDefense: SpecialDefense[11],Speed : Speed[11] }},
+    {type: "Psychic", value :  {HP :HP[12] , Attack: Attack[12] , Defense : Defense[12],SpecialAttack: SpecialAttack[12],SpecialDefense: SpecialDefense[12],Speed : Speed[12] }},
+    {type: "Fighting", value :  {HP :HP[13] , Attack: Attack[13] , Defense : Defense[13],SpecialAttack: SpecialAttack[13],SpecialDefense: SpecialDefense[13],Speed : Speed[13] }}
+    
     ];
             // Reformat the data: we need an array of arrays of {x, y} tuples
     var dataReady = allGroup.map( function(grpName) { // .map allows to do something for each element of the list
@@ -322,15 +455,19 @@ var svg = d3.select("#my_dataviz")
       .range(d3.schemeSet2);
  
         // Set the ranges
-    var x = d3.scaleLinear().range([0, width]).domain([0,6]);
-    var xAxis = d3.axisBottom().scale(x).tickFormat(function(d) { return d.type; });
-    svg.append("g").attr("transform", "translate(0," + height + ")").call(xAxis);
-    var y = d3.scaleLinear().range([height, 0]).domain([55, d3.max(HP)+20]);
+    var x = d3.scaleBand().range([0, width]).domain(["Grass", "Fire", "Water", "Poison", "Dragon", "Ghost", "Bug","Dark","Electric","Steel","Rock","Psychic","Fighting"]).padding(1)  
+    //var xAxis = d3.axisBottom().scale(x).ticks(5).tickFormat(function(d){line_data[d].type}) ;
+    //svg.append("g").attr("transform", "translate(0," + height + ")").call(d3.axisBottom(xAxis));
+    svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x))
+    var y = d3.scaleLinear().range([height, 0]).domain([45, d3.max(HP)+50]);
     svg.append("g")
       .call(d3.axisLeft(y));
     console.log(svg)
     // Add the lines
     var line = d3.line()
+
       .x(function(d) { return x(d.type) })
       .y(function(d) { return y(d.value) })
 
