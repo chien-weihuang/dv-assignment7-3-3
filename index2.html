@@ -323,7 +323,7 @@ var svg = d3.select("#my_dataviz")
  
         // Set the ranges
     var x = d3.scaleLinear().range([0, width]).domain([0,6]);
-    var xAxis = d3.axisBottom().scale(x).ticks(5);
+    var xAxis = d3.axisBottom().scale(x).tickFormat(function(d) { return d.type; });
     svg.append("g").attr("transform", "translate(0," + height + ")").call(xAxis);
     var y = d3.scaleLinear().range([height, 0]).domain([55, d3.max(HP)+20]);
     svg.append("g")

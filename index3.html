@@ -80,6 +80,7 @@ var svg = d3.select("#my_dataviz")
     count = 0
     
     data.forEach(function(d) {
+      console.log(d.Legendary)
         if (d.Generation == 1 &&  d.Legendary == "TRUE"){
             HPMean += +d.HP;
             AttackMean += +d.Attack;
