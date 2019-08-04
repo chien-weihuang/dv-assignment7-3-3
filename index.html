@@ -2,20 +2,43 @@
 <meta charset="utf-8">
 
 <!-- Load d3.js -->
+<iframe src="pokemon.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+</iframe> 
+<audio autoplay loop  id="playAudio">
+      <source src="pokemon.mp3">
+    </audio>
 <script src="https://d3js.org/d3.v4.js"></script>
+<body>
 <h1 style="margin-left: 10%">Pokemon Analysis based on Generations</h1>
 <!-- Create a div where the graph will take place -->
 <div id="my_dataviz" style="margin-left: 5%"></div>
 <h3 style="margin-left: 10%">X Axis - Generations</h3>
 <h3 style="margin-left: 10%">Y Axis - Mean values for each type of attribute</h3>
+</body>
 <!-- Color Scale -->
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 
 <style>
 .myCircle:hover {
-  stroke: black;
+  stroke: red;
+}
+body {
+ background: url('420248.jpg') no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
 }
 </style>
+<script>
+ var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    if(!isChrome){
+      $('#iframeAudio').remove()
+    }
+  else{
+     $('#playAudio').remove() //just to make sure that it will not have 2x audio in the background 
+  }
+</script>
 <script>
 
 // Get the data
@@ -248,8 +271,8 @@ var svg = d3.select("#my_dataviz")
       .style("opacity", 0)
       .attr("class", "tooltip")
       .style("background-color", "white")
-      .style("border", "solid")
-      .style("border-width", "2px")
+      //.style("border", "solid")
+      //.style("border-width", "2px")
       .style("border-radius", "5px")
       .style("padding", "5px")
 
@@ -260,7 +283,8 @@ var svg = d3.select("#my_dataviz")
       }
       var mousemove = function(d) {
         Tooltip
-          .html("Attribute Mean: " + d.value)
+          .html("Pokemon Generation " + d.type + "<br>"+"Attribute Mean: " + d.value)
+//          .html()
           .style("left", (d3.mouse(this)[0]+70) + "px")
           .style("top", (d3.mouse(this)[1]) + "px")
       }
