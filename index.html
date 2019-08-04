@@ -3,10 +3,11 @@
 
 <!-- Load d3.js -->
 <script src="https://d3js.org/d3.v4.js"></script>
-
+<h1 style="margin-left: 10%">Pokemon Analysis based on Generations</h1>
 <!-- Create a div where the graph will take place -->
-<div id="my_dataviz"></div>
-
+<div id="my_dataviz" style="margin-left: 5%"></div>
+<h3 style="margin-left: 10%">X Axis - Generations</h3>
+<h3 style="margin-left: 10%">Y Axis - Mean values for each type of attribute</h3>
 <!-- Color Scale -->
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 
@@ -280,7 +281,7 @@ var svg = d3.select("#my_dataviz")
       .enter()
         .append('g')
         .append("text")
-          .attr('x', function(d,i){ return 30 + i*60})
+          .attr('x', function(d,i){ return 30 + i*120})
           .attr('y', 30)
           .text(function(d) { return d.name; })
           .style("fill", function(d){ return myColor(d.name) })
